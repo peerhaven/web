@@ -1,0 +1,31 @@
+{
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "node_modules/@peerhaven/peerhaven/.cz-config.js"
+    }
+  },
+  "dependencies": {
+    "nuxt": "^1.4.0"
+  },
+  "devDependencies": {
+    "@peerhaven/peerhaven": "https://github.com/peerhaven/peerhaven.git",
+    "commitizen": "^2.9.6",
+    "cz-customizable": "^5.2.0",
+    "semistandard": "^12.0.0",
+    "snazzy": "^7.0.0"
+  },
+  "name": "@peerhaven/web",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peerhaven/web.git"
+  },
+  "scripts": {
+    "cz": "semistandard --fix && git add . && mdl . && git-cz",
+    "dev": "nuxt",
+    "js-lint": "semistandard --verbose | snazzy"
+  },
+  "version": "1.0.0"
+}
