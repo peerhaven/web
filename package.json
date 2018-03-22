@@ -7,6 +7,9 @@
       "config": "node_modules/@peerhaven/peerhaven/.cz-config.js"
     }
   },
+  "dependencies": {
+    "nuxt": "^1.4.0"
+  },
   "devDependencies": {
     "@peerhaven/peerhaven": "https://github.com/peerhaven/peerhaven.git",
     "commitizen": "^2.9.6",
@@ -21,6 +24,7 @@
   },
   "scripts": {
     "cz": "semistandard --fix && git add . && mdl . && git-cz",
+    "dev": "nuxt",
     "js-lint": "semistandard --verbose | snazzy"
   },
   "version": "1.0.0"
