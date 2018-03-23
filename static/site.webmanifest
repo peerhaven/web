@@ -1,0 +1,19 @@
+{
+  "background_color": "#36d1c4",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "/android-chrome-192x192.png?v=1",
+      "type": "image/png"
+    },
+    {
+      "sizes": "256x256",
+      "src": "/android-chrome-256x256.png?v=1",
+      "type": "image/png"
+    }
+  ],
+  "name": "peerhaven",
+  "short_name": "peerhaven",
+  "theme_color": "#36d1c4"
+}
