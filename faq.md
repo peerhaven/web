@@ -1,18 +1,37 @@
 # FAQ
 
 Please check the following questions before getting in touch with us.
+Be aware that we omit some file contents or command line output to keep things concise.
 
 ## Contents
 
+- [Files](#files)
+  - [Where do I put meta data?](#where-do-i-put-meta-data)
 - [Errors](#errors)
   - [ENOSPC](#enospc)
   - [Hot update could not be found](#hot-update-could-not-be-found)
+
+## Files
+
+Common tasks and how they're connected to the project's files.
+
+### Where do I put meta data?
+
+`nuxt.config.js` lets you define default meta data in its `head` property:
+
+```javascript
+module.exports = {
+  head: {
+    link: [],
+    meta: []
+  }
+};
+```
 
 ## Errors
 
 There's a few issues we have encountered in the past.
 See this list if you have problems.
-Be aware that we omit some command line output to keep things concise.
 
 ### ENOSPC
 
