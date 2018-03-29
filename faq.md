@@ -5,28 +5,13 @@ Be aware that we omit some file contents or command line output to keep things c
 
 ## Contents
 
-- [Files](#files)
-  - [Where do I put meta data?](#where-do-i-put-meta-data)
 - [Errors](#errors)
   - [ENOSPC](#enospc)
   - [Hot update could not be found](#hot-update-could-not-be-found)
-
-## Files
-
-Common tasks and how they're connected to the project's files.
-
-### Where do I put meta data?
-
-`nuxt.config.js` lets you define default meta data in its `head` property:
-
-```javascript
-module.exports = {
-  head: {
-    link: [],
-    meta: []
-  }
-};
-```
+- [HTML](#html)
+  - [Where do I put meta data?](#where-do-i-put-meta-data)
+- [HTTP](#http)
+  - [Is the server response gzipped?](#is-the-server-response-gzipped)
 
 ## Errors
 
@@ -86,3 +71,28 @@ $ cat /proc/sys/fs/inotify/max_user_watches
 ```
 
 [Nuxt.js issue #2710](https://github.com/nuxt/nuxt.js/issues/2710) is related to hot reloading and may be fixed with _Nuxt.js 2_.
+
+## HTML
+
+Everything connected to the project's HTML.
+
+### Where do I put meta data?
+
+`nuxt.config.js` lets you define default meta data in its `head` property:
+
+```javascript
+module.exports = {
+  head: {
+    link: [],
+    meta: []
+  }
+};
+```
+
+## HTTP
+
+Web server related questions.
+
+### Is the server response gzipped?
+
+In the _network_ tab of your browser's developer tools, the response headers of a given resource include `Content-Encoding: gzip` if they're gzipped.
