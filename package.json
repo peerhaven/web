@@ -23,9 +23,11 @@
     "url": "https://github.com/peerhaven/web.git"
   },
   "scripts": {
+    "build": "nuxt build",
     "cz": "semistandard --fix && git add . && mdl . && git-cz",
     "dev": "nuxt",
-    "js-lint": "semistandard --verbose | snazzy"
+    "js-lint": "semistandard --verbose | snazzy",
+    "start": "nuxt start"
   },
   "version": "1.0.0"
 }
