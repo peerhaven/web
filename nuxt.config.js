@@ -33,6 +33,26 @@ module.exports = {
       }
     ],
     meta: [
+      // charset, viewport and CSP should come first
+      {
+        charset: 'utf-8'
+      },
+      {
+        content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        name: 'viewport'
+      },
+      {
+        'http-equiv': 'Content-Security-Policy',
+        content: "default-src 'self'"
+      },
+      {
+        'http-equiv': 'x-ua-compatible',
+        content: 'ie=edge'
+      },
+      {
+        content: '/browserconfig.xml',
+        name: 'msapplication-config'
+      },
       {
         content: '#36d1c4',
         name: 'msapplication-TileColor'
@@ -40,7 +60,32 @@ module.exports = {
       {
         content: '#36d1c4',
         name: 'theme-color'
+      },
+      {
+        content: 'index,follow',
+        name: 'googlebot'
+      },
+      {
+        content: 'index,follow',
+        name: 'robots'
+      },
+      {
+        content: 'yes',
+        name: 'mobile-web-app-capable'
+      },
+      {
+        content: 'peerhaven',
+        name: 'apple-mobile-web-app-title'
+      },
+      {
+        content: 'peerhaven',
+        name: 'application-name'
+      },
+      {
+        content: 'peerhaven is a place for you to save and share your bookmarks.',
+        name: 'description'
       }
-    ]
+    ],
+    title: 'peerhaven'
   }
 };
