@@ -1,4 +1,25 @@
 module.exports = {
+  build: {
+    extractCSS: {
+      allChunks: true // don't inline CSS; instead, output into separate file
+    },
+    maxChunkSize: 300000, // split into smaller files
+    postcss: {
+      plugins: {
+        'postcss-custom-properties': {
+          // see https://github.com/buefy/buefy/issues/306
+          // and https://github.com/nuxt/nuxt.js/issues/1670
+          warnings: false
+        }
+      }
+    }
+  },
+  css: [
+    {
+      lang: 'sass',
+      src: 'assets/scss/overrides.scss'
+    }
+  ],
   head: {
     link: [
       {
@@ -32,18 +53,13 @@ module.exports = {
         rel: 'manifest'
       }
     ],
-    meta: [
-      // charset, viewport and CSP should come first
+    meta: [ // charset and viewport should come first
       {
         charset: 'utf-8'
       },
       {
         content: 'width=device-width, initial-scale=1, shrink-to-fit=no',
         name: 'viewport'
-      },
-      {
-        'http-equiv': 'Content-Security-Policy',
-        content: "default-src 'self'"
       },
       {
         'http-equiv': 'x-ua-compatible',
@@ -87,5 +103,18 @@ module.exports = {
       }
     ],
     title: 'peerhaven'
+  },
+  loading: { // customizing progress bar
+    color: '#f6318c',
+    failedColor: '#ff3860'
+  },
+  modules: [
+    ['nuxt-buefy', {
+      css: false, // use Sass imports instead
+      materialDesignIcons: false // don't add icons
+    }]
+  ],
+  render: {
+    csp: true // see https://github.com/nuxt/nuxt.js/pull/2549
   }
 };
