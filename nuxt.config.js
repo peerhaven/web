@@ -110,8 +110,7 @@ module.exports = {
   },
   modules: [
     ['nuxt-buefy', {
-      css: false, // use Sass imports instead
-      materialDesignIcons: false // don't add icons
+      css: false // use Sass imports instead
     }]
   ],
   render: {
