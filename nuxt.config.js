@@ -17,7 +17,7 @@ module.exports = {
   css: [
     {
       lang: 'sass',
-      src: 'assets/scss/overrides.scss'
+      src: 'assets/scss/_main.scss'
     }
   ],
   head: {
