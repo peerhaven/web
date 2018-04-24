@@ -8,4 +8,4 @@ See [setup instructions](SETUP.md).
 
 ## FAQ
 
-Check [FAQ](faq.md) if you have questions.
+Check [FAQ](FAQ.md) if you have questions.
