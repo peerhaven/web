@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   build: {
     extractCSS: {
@@ -111,6 +113,11 @@ module.exports = {
   modules: [
     ['nuxt-buefy', {
       css: false // use Sass imports instead
+    }],
+    ['nuxt-matomo', {
+      cookies: true,
+      matomoUrl: process.env.MATOMO_URL,
+      siteId: process.env.MATOMO_SITE_ID
     }]
   ],
   render: {
