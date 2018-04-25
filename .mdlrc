@@ -1,0 +1,2 @@
+git_recurse true
+style "node_modules/@peerhaven/peerhaven/codestyle/markdown.rb"
