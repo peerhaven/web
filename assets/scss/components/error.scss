@@ -1,0 +1,28 @@
+div.error-container {
+  text-align: center;
+
+  h1 {
+    @extend .has-text-weight-light;
+    @extend .has-text-white;
+    @extend .is-size-1;
+    font-family: Comfortaa;
+    margin-bottom: 2rem;
+  }
+
+  .message {
+    @extend .is-size-5;
+    max-width: 30rem;
+
+    p:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .message-header {
+    justify-content: center;
+
+    h2 {
+      font-weight: 500;
+    }
+  }
+}

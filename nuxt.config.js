@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // parse .env file
 
 module.exports = {
   build: {
@@ -28,6 +28,14 @@ module.exports = {
         color: '#36d1c4',
         href: '/safari-pinned-tab.svg?v=1',
         rel: 'mask-icon'
+      },
+      {
+        href: '//fonts.googleapis.com/css?family=Comfortaa:300&amp;subset=cyrillic,cyrillic-ext,greek,latin-ext',
+        rel: 'stylesheet'
+      },
+      {
+        href: '//fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext',
+        rel: 'stylesheet'
       },
       {
         href: '/apple-touch-icon.png?v=1',

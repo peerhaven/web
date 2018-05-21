@@ -9,3 +9,7 @@ See [setup instructions](SETUP.md).
 ## FAQ
 
 Check [FAQ](FAQ.md) if you have questions.
+
+## Changelog
+
+For a summary of all changes, please see [changelog](CHANGELOG.md).

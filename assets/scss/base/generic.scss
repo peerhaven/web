@@ -1,4 +1,11 @@
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
 body {
+  font-family: 'Maven Pro';
+  font-weight: 400;
   min-height: 100%;
 }
 
