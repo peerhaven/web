@@ -12,24 +12,20 @@ $turquoise: #36d1c4;
  * Override here
  */
 
-$link: $pink;
-$link-hover: $pink;
-$link-visited: $pink;
+// $link: $pink;
+// $link-hover: $pink;
+// $link-visited: $pink;
 
 // Import Bulma styles
 @import "~bulma/sass/base/_all";
 @import "~bulma/sass/grid/_all";
 @import "~bulma/sass/layout/_all";
-
 // Import Bulma elements
 @import "~bulma/sass/elements/container";
 @import "~bulma/sass/elements/other";
-
 // Import Bulma components
 @import "~bulma/sass/components/message";
-
 // Import Buefy core
 @import "~buefy/src/scss/utils/_all";
-
 // Import Buefy components
 @import "~buefy/src/scss/components/_message";

@@ -30,8 +30,9 @@
 <script src="./error.js"></script>
 
 <style lang="scss">
-@import './assets/scss/base/variables.scss'
+@import './assets/scss/overrides';
+
 article.message .media {
-  color: $pink;
+  color: $turquoise;
 }
 </style>
