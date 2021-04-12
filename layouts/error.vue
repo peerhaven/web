@@ -1,3 +1,11 @@
+<script src="./error.js"></script>
+
+<style lang="scss">
+article.message .media {
+  color: $turquoise;
+}
+</style>
+
 <template>
   <div class="error-container">
     <img
@@ -26,13 +34,3 @@
     </b-message>
   </div>
 </template>
-
-<script src="./error.js"></script>
-
-<style lang="scss">
-@import './assets/scss/overrides';
-
-article.message .media {
-  color: $turquoise;
-}
-</style>

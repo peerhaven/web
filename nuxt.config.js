@@ -18,7 +18,7 @@ module.exports = {
   },
   css: [{
     lang: 'sass',
-    src: 'assets/scss/_main.scss'
+    src: 'assets/scss/main.scss'
   }],
   head: {
     link: [{
@@ -125,7 +125,7 @@ module.exports = {
       siteId: process.env.MATOMO_SITE_ID
     }],
     ['nuxt-sass-resources-loader', {
-      resources: './assets/scss/overrides.scss' // implicit import in every scss file
+      resources: './assets/scss/utilities.scss' // implicit import in every scss file
     }]
   ],
   render: {
