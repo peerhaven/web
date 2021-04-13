@@ -4,6 +4,12 @@
 >
 > (Source: [Keep a Changelog](https://keepachangelog.com/en/1.0.0/))
 
+## 1.0.1
+
+### Added
+
+- Error pages
+
 ## 2018-04-25
 
 ### Added

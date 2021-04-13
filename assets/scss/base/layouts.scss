@@ -1,7 +1,8 @@
 /*
- * Coming soon page
+ * Coming soon & error page page
  */
-body.coming-soon {
+body.coming-soon,
+body.error-page {
   background-color: $primary;
 
   // https://css-tricks.com/centering-css-complete-guide/

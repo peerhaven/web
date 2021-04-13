@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // parse .env file
 
 module.exports = {
   build: {
@@ -16,44 +16,49 @@ module.exports = {
       }
     }
   },
-  css: [
-    {
-      lang: 'sass',
-      src: 'assets/scss/_main.scss'
-    }
-  ],
+  css: [{
+    lang: 'sass',
+    src: 'assets/scss/main.scss'
+  }],
   head: {
-    link: [
-      {
-        color: '#36d1c4',
-        href: '/safari-pinned-tab.svg?v=1',
-        rel: 'mask-icon'
-      },
-      {
-        href: '/apple-touch-icon.png?v=1',
-        rel: 'apple-touch-icon',
-        sizes: '180x180'
-      },
-      {
-        href: '/favicon-16x16.png?v=1',
-        rel: 'icon',
-        sizes: '16x16',
-        type: 'image/png'
-      },
-      {
-        href: '/favicon-32x32.png?v=1',
-        rel: 'icon',
-        sizes: '32x32',
-        type: 'image/png'
-      },
-      {
-        href: '/favicon.ico?v=1',
-        rel: 'shortcut icon'
-      },
-      {
-        href: '/site.webmanifest?v=1',
-        rel: 'manifest'
-      }
+    link: [{
+      color: '#36d1c4',
+      href: '/safari-pinned-tab.svg?v=1',
+      rel: 'mask-icon'
+    },
+    {
+      href: '//fonts.googleapis.com/css?family=Comfortaa:300&amp;subset=cyrillic,cyrillic-ext,greek,latin-ext',
+      rel: 'stylesheet'
+    },
+    {
+      href: '//fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext',
+      rel: 'stylesheet'
+    },
+    {
+      href: '/apple-touch-icon.png?v=1',
+      rel: 'apple-touch-icon',
+      sizes: '180x180'
+    },
+    {
+      href: '/favicon-16x16.png?v=1',
+      rel: 'icon',
+      sizes: '16x16',
+      type: 'image/png'
+    },
+    {
+      href: '/favicon-32x32.png?v=1',
+      rel: 'icon',
+      sizes: '32x32',
+      type: 'image/png'
+    },
+    {
+      href: '/favicon.ico?v=1',
+      rel: 'shortcut icon'
+    },
+    {
+      href: '/site.webmanifest?v=1',
+      rel: 'manifest'
+    }
     ],
     meta: [ // charset and viewport should come first
       {
@@ -118,6 +123,9 @@ module.exports = {
       cookies: true,
       matomoUrl: process.env.MATOMO_URL,
       siteId: process.env.MATOMO_SITE_ID
+    }],
+    ['nuxt-sass-resources-loader', {
+      resources: './assets/scss/utilities.scss' // implicit import in every scss file
     }]
   ],
   render: {
