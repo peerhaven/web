@@ -8,11 +8,13 @@ export default {
       messageTitle: 'Error'
     };
   },
-  head: {
-    bodyAttrs: {
-      class: 'error-page'
-    },
-    title: this.error.message + ' · peerhaven'
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'error-page'
+      },
+      title: this.error.message + ' · peerhaven'
+    };
   },
   methods: {
     initialiseMessage: function () {

@@ -6,12 +6,12 @@ Be aware that we omit some file contents or command line output to keep things c
 ## Contents
 
 - [Errors](#errors)
-  - [ENOSPC](#enospc)
-  - [Hot update could not be found](#hot-update-could-not-be-found)
+  + [ENOSPC](#enospc)
+  + [Hot update could not be found](#hot-update-could-not-be-found)
 - [HTML](#html)
-  - [Where do I put meta data?](#where-do-i-put-meta-data)
+  + [Where do I put meta data?](#where-do-i-put-meta-data)
 - [HTTP](#http)
-  - [Is the server response gzipped?](#is-the-server-response-gzipped)
+  + [Is the server response gzipped?](#is-the-server-response-gzipped)
 
 ## Errors
 
