@@ -120,9 +120,6 @@ module.exports = {
       cookies: true,
       matomoUrl: process.env.MATOMO_URL,
       siteId: process.env.MATOMO_SITE_ID
-    }],
-    ['nuxt-sass-resources-loader', {
-      resources: './assets/scss/utilities.scss' // implicit import in every scss file
     }]
   ],
   render: {
