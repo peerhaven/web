@@ -1,4 +1,14 @@
-<script src="./index.js"></script>
+<script>
+export default {
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'coming-soon'
+      }
+    };
+  }
+};
+</script>
 
 <template>
   <img
