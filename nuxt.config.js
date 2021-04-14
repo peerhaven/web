@@ -2,9 +2,6 @@ require('dotenv').config(); // parse .env file
 
 module.exports = {
   build: {
-    extractCSS: {
-      allChunks: true // don't inline CSS; instead, output into separate file
-    },
     maxChunkSize: 300000, // split into smaller files
     postcss: {
       plugins: {
