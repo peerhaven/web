@@ -3,10 +3,8 @@
  */
 body.coming-soon,
 body.error-page {
-  background-color: $primary;
-
-  // https://css-tricks.com/centering-css-complete-guide/
   align-items: center;
+  background-color: $primary;
   display: flex;
   justify-content: center;
 }

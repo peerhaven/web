@@ -21,7 +21,9 @@
     "cz-customizable": "^6.3.0",
     "markdownlint-cli": "^0.27.1",
     "semistandard": "^16.0.0",
-    "snazzy": "^9.0.0"
+    "snazzy": "^9.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-sass-guidelines": "^8.0.0"
   },
   "name": "@peerhaven/web",
   "repository": {
@@ -30,10 +32,11 @@
   },
   "scripts": {
     "build": "nuxt build",
-    "cz": "yarn lint-js && yarn lint-md && git add . && git-cz",
+    "cz": "yarn lint-js && yarn lint-md && yarn lint-scss && git add . && git-cz",
     "dev": "nuxt",
     "lint-js": "semistandard --verbose | snazzy",
     "lint-md": "markdownlint '**/*.md' --config node_modules/@peerhaven/peerhaven/.markdownlint.json",
+    "lint-scss": "stylelint 'assets/scss/**/*.scss'",
     "start": "nuxt start"
   },
   "version": "1.0.1"

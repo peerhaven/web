@@ -2,36 +2,36 @@
  * Utilities
  */
 
-@import "utilities/variables";
-@import "~bulma/sass/utilities/_all";
-@import "~buefy/src/scss/utils/_all";
+@import 'utilities/variables';
+@import '~bulma/sass/utilities/_all';
+@import '~buefy/src/scss/utils/_all';
 
 /*
  * Bulma
  */
 
-@import "~bulma/sass/base/_all";
-@import "~bulma/sass/grid/_all";
-@import "~bulma/sass/layout/_all";
+@import '~bulma/sass/base/_all';
+@import '~bulma/sass/grid/_all';
+@import '~bulma/sass/layout/_all';
 
-@import "~bulma/sass/elements/button";
-@import "~bulma/sass/elements/container";
-@import "~bulma/sass/elements/other";
+@import '~bulma/sass/elements/button';
+@import '~bulma/sass/elements/container';
+@import '~bulma/sass/elements/other';
 
-@import "~bulma/sass/components/message";
+@import '~bulma/sass/components/message';
 
 /*
  * Buefy
  */
 
-@import "~buefy/src/scss/components/_message";
+@import '~buefy/src/scss/components/_message';
 
 /*
  * peerhaven
  */
 
-@import "base/generic";
-@import "base/layouts";
+@import 'base/generic';
+@import 'base/layouts';
 
-@import "components/error";
-@import "components/message";
+@import 'components/error';
+@import 'components/message';
