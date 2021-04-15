@@ -10,6 +10,7 @@
 - [Setup](SETUP.md)
 - [FAQ](FAQ.md)
 - [Guide for contributors](CONTRIBUTING.md)
+- [Security policy](https://github.com/peerhaven/peerhaven/blob/master/SECURITY.md)
 - [Changelog](CHANGELOG.md)
 - [Colophon](https://github.com/peerhaven/peerhaven/blob/master/COLOPHON.md)
 
