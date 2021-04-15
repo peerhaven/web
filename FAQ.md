@@ -7,7 +7,6 @@ Be aware that we omit some file contents or command line output to keep things c
 
 - [Errors](#errors)
   + [ENOSPC](#enospc)
-  + [Hot update could not be found](#hot-update-could-not-be-found)
 - [HTML](#html)
   + [Where do I put meta data?](#where-do-i-put-meta-data)
 - [HTTP](#http)
@@ -21,7 +20,7 @@ See this list if you have problems.
 ### ENOSPC
 
 ```bash
-$ yarn run dev
+$ yarn dev
 nuxt:build App root: ~/peerhaven/web +0ms
 nuxt:build Generating ~/peerhaven/web/.nuxt files... +1ms
 events.js:137
@@ -60,17 +59,6 @@ $ cat /proc/sys/fs/inotify/max_user_watches
 - [guard/listen wiki](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers)
 - [Nuxt.js issue #563](https://github.com/nuxt/nuxt.js/issues/563)
 - [Stack Overflow](https://stackoverflow.com/q/22475849/2040520)
-
-### Hot update could not be found
-
-```
-  nuxt:render Rendering url /_nuxt/bd395ed6e1ba868f20f5.hot-update.json +5m
-{ statusCode: 404,
-  path: '/_nuxt/bd395ed6e1ba868f20f5.hot-update.json',
-  message: 'This page could not be found' }
-```
-
-[Nuxt.js issue #2710](https://github.com/nuxt/nuxt.js/issues/2710) is related to hot reloading and may be fixed with _Nuxt.js 2_.
 
 ## HTML
 
