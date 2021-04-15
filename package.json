@@ -1,8 +1,8 @@
 {
   "author": "Andrej Stieben (https://github.com/stieben)",
   "bugs": {
-    "email" : "bugs@peerhaven.net",
-    "url" : "https://github.com/peerhaven/web/issues"
+    "email": "bugs@peerhaven.net",
+    "url": "https://github.com/peerhaven/web/issues"
   },
   "config": {
     "commitizen": {
@@ -34,6 +34,9 @@
   "homepage": "https://peerhaven.net",
   "license": "SEE LICENSE IN LICENSE.md",
   "name": "@peerhaven/web",
+  "optionalDependencies": {
+    "license-checker": "^25.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/peerhaven/web.git"
