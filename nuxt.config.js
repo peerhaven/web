@@ -1,6 +1,6 @@
 require('dotenv').config(); // parse .env file
 
-module.exports = {
+export default {
   build: {
     maxChunkSize: 300000, // split into smaller files
     postcss: {
