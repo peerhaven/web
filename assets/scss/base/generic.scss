@@ -9,6 +9,21 @@ body {
   min-height: 100%;
 }
 
+h1 {
+  font-family: 'Comfortaa';
+  font-size: $size-1;
+  font-weight: $weight-light;
+  margin-bottom: $size-1;
+}
+
 html {
   height: 100%;
+}
+
+p {
+  font-size: $size-5;
+
+  &:not(:last-of-type) {
+    margin-bottom: $size-5;
+  }
 }

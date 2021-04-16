@@ -13,10 +13,10 @@ export default {
       }
     }
   },
-  css: [{
-    lang: 'sass',
-    src: 'assets/scss/main.scss'
-  }],
+
+  buildModules: ['@nuxtjs/style-resources'],
+  css: ['assets/scss/main'],
+
   head: {
     link: [{
       color: '#36d1c4',
@@ -108,13 +108,15 @@ export default {
     ],
     title: 'peerhaven'
   },
-  loading: { // customizing progress bar
+
+  loading: { // custom progress bar
     color: '#f6318c',
     failedColor: '#ff3860'
   },
+
   modules: [
     ['nuxt-buefy', {
-      css: false // use Sass imports instead
+      css: false // use SCSS imports instead
     }],
     ['nuxt-matomo', {
       cookies: true,
@@ -122,7 +124,13 @@ export default {
       siteId: process.env.MATOMO_SITE_ID
     }]
   ],
+
   render: {
     csp: true // see https://github.com/nuxt/nuxt.js/pull/2549
+  },
+  styleResources: {
+    scss: [
+      './assets/scss/implicit.scss'
+    ]
   }
 };

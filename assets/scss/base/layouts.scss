@@ -1,10 +1,12 @@
 /*
- * Coming soon & error page page
+ * Coming soon & error page
  */
 body.coming-soon,
 body.error-page {
   align-items: center;
   background-color: $primary;
+  color: $primary-invert;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
