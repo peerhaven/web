@@ -19,6 +19,9 @@ export default {
   css: ['assets/scss/main'],
 
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
     link: [
       {
         color: '#36d1c4',

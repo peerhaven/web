@@ -14,7 +14,7 @@ export default {
   head () {
     return {
       bodyAttrs: {
-        class: 'error-page'
+        class: 'has-background-primary  has-content-centered  has-text-white'
       },
       title: this.error.message + ' · peerhaven'
     };
@@ -38,15 +38,28 @@ export default {
 };
 </script>
 
+
+
+
+
 <style lang="scss" scoped>
+/*
+ * Extend message component: Bulma > Buefy > ph >
+ */
+
 .message {
   max-width: 30rem;
 
-  &::v-deep .message-header {
+  // has to be nested because it styles a sub component
+  &::v-deep > .message-header {
     justify-content: center;
   }
 }
 </style>
+
+
+
+
 
 <template>
   <div>
@@ -55,6 +68,7 @@ export default {
       src="~/assets/img/aghast-emoticon.png"
     />
     <h1>Oh snap!</h1>
+
     <b-message
       :closable="false"
       :title="messageTitle"

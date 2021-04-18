@@ -1,2 +1,13 @@
+@charset 'utf-8';
+
+/*----------------*\
+  Implicit imports
+\*----------------*/
+
+/**
+ * The following files get imported into main and every Vue component auto-
+ * matically. They don't produce any CSS output by themselves.
+ */
+
 @import 'utilities/variables';
 @import '~bulma/sass/utilities/_all';

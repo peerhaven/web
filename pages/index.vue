@@ -3,12 +3,16 @@ export default {
   head () {
     return {
       bodyAttrs: {
-        class: 'coming-soon'
+        class: 'has-background-primary  has-content-centered'
       }
     };
   }
 };
 </script>
+
+
+
+
 
 <template>
   <img
