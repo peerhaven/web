@@ -1,37 +1,42 @@
-/*
- * Utilities
- */
+/*----------------*\
+  Main entry point
+\*----------------*/
 
-@import 'utilities/variables';
-@import '~bulma/sass/utilities/_all';
-@import '~buefy/src/scss/utils/_all';
+/**
+ * Only used styles are imported, to keep files sizes as small as possible.
+ */
 
 /*
  * Bulma
  */
 
 @import '~bulma/sass/base/_all';
-@import '~bulma/sass/grid/_all';
-@import '~bulma/sass/layout/_all';
+
+@import '~bulma/sass/helpers/color';
+@import '~bulma/sass/helpers/flexbox';
+@import '~bulma/sass/helpers/typography';
 
 @import '~bulma/sass/elements/button';
-@import '~bulma/sass/elements/container';
-@import '~bulma/sass/elements/other';
 
 @import '~bulma/sass/components/message';
+
 
 /*
  * Buefy
  */
 
+@import '~buefy/src/scss/utils/_all';
+
 @import '~buefy/src/scss/components/_message';
+
 
 /*
  * peerhaven
  */
 
 @import 'base/generic';
-@import 'base/layouts';
+@import 'base/typography';
 
-@import 'components/error';
+@import 'helpers/flexbox';
+
 @import 'components/message';

@@ -1,9 +1,11 @@
 {
   "author": "Andrej Stieben (https://github.com/stieben)",
+
   "bugs": {
     "email": "bugs@peerhaven.net",
     "url": "https://github.com/peerhaven/web/issues"
   },
+
   "config": {
     "commitizen": {
       "path": "cz-customizable"
@@ -12,43 +14,54 @@
       "config": "node_modules/@peerhaven/peerhaven/.cz-config.js"
     }
   },
+
   "dependencies": {
     "dotenv": "^8.2.0",
     "nuxt": "^2.15.4",
     "nuxt-buefy": "^0.4.6",
-    "nuxt-matomo": "^1.2.4",
-    "sass": "^1.32.8",
-    "sass-loader": "^10.1.1"
+    "nuxt-matomo": "^1.2.4"
   },
+
   "description": "The peerhaven web app",
+
   "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "@peerhaven/peerhaven": "^1.1.1",
     "commitizen": "^4.2.3",
     "cz-customizable": "^6.3.0",
+    "fibers": "^5.0.0",
     "markdownlint-cli": "^0.27.1",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
     "semistandard": "^16.0.0",
     "snazzy": "^9.0.0",
     "stylelint": "^13.12.0",
     "stylelint-config-sass-guidelines": "^8.0.0"
   },
+
   "homepage": "https://peerhaven.net",
   "license": "SEE LICENSE IN LICENSE.md",
   "name": "@peerhaven/web",
+
   "optionalDependencies": {
     "license-checker": "^25.0.1"
   },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/peerhaven/web.git"
   },
+
   "scripts": {
     "build": "nuxt build",
-    "commit": "yarn lint-js && yarn lint-md && yarn lint-scss && git add . && git-cz",
+    "commit": "yarn lint:js && yarn lint:md && yarn lint:scss && git add . && git-cz",
     "dev": "nuxt",
-    "lint-js": "semistandard --verbose | snazzy",
-    "lint-md": "markdownlint '**/*.md' --config node_modules/@peerhaven/peerhaven/.markdownlint.json",
-    "lint-scss": "stylelint 'assets/scss/**/*.scss'",
+    "dev:lan": "nuxt --hostname '0'",
+    "lint:js": "semistandard --verbose | snazzy",
+    "lint:md": "markdownlint '**/*.md' --config node_modules/@peerhaven/peerhaven/.markdownlint.json",
+    "lint:scss": "stylelint 'assets/scss/**/*.scss'",
     "start": "nuxt start"
   },
+  
   "version": "1.0.1"
 }

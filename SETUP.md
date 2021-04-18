@@ -7,7 +7,8 @@ Please see [setup instructions in main repository](https://github.com/peerhaven/
 Start development server:
 
 ```bash
-yarn dev
+yarn dev # for localhost access, or
+yarn dev:lan # for LAN access
 ```
 
 Build project and start production server:

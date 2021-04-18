@@ -1,8 +1,12 @@
-.message {
-  margin: 0 1rem;
-}
+/*------------------*\
+  Component: Message
+\*------------------*/
 
-.message-header {
-  font-weight: $weight-medium;
-  justify-content: center;
-}
+/**
+ * Extend message component: Bulma > Buefy >
+ */
+
+// leave a gap on the sides for narrow viewports
+.message { margin: 0 $clearance-small; }
+
+.message-header { @extend .has-text-weight-medium; }
