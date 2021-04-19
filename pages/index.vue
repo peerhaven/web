@@ -15,8 +15,9 @@ export default {
 
 
 <template>
-  <img
-    alt="peerhaven logo"
-    src="~/assets/img/ph-circle-darkgrey-white-transparent-200.png"
+  <base-image
+    fallback="png"
+    filename="ph-circle-darkgrey-white-transparent"
+    info="peerhaven logo"
   />
 </template>
