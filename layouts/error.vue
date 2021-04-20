@@ -65,8 +65,8 @@ export default {
   <div>
     <base-image
       fallback="png"
-      filename="aghast-emoticon"
-      info="aghast emoticon"
+      filename="aghast-emoji"
+      info="aghast emoji"
     />
     <h1>Oh snap!</h1>
 
