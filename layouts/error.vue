@@ -63,9 +63,10 @@ export default {
 
 <template>
   <div>
-    <img
-      alt="aghast emoticon"
-      src="~/assets/img/aghast-emoticon.png"
+    <base-image
+      fallback="png"
+      filename="aghast-emoticon"
+      info="aghast emoticon"
     />
     <h1>Oh snap!</h1>
 
