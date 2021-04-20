@@ -23,7 +23,7 @@ export default {
     getSourceSet: function (extension) {
       let value = this.getSource(extension);
 
-      // intentionally starting at 1 because first pixel ratio is already in src
+      // intentionally starting at 1 because first pixel ratio already in value
       for (let i = 1; i < this.pixelRatioList.length; i++) {
         let imagePath = getImagePath(
           this.pixelRatioList[i],
@@ -51,14 +51,16 @@ export default {
 };
 
 /**
- * Example output: /_nuxt/assets/img/png/1.0x/happy-emoji.png
+ * Example output:
+ * - in development: /_nuxt/assets/img/png/1.0x/happy-emoji.png
+ * - in production: /_nuxt/img/happy-emoji.d0882ca.png
  */
 function getImagePath(pixelRatio, filename, extension) {
+  let relativePath = `${extension}/${pixelRatio}/${filename}.${extension}`;
+
   // request the image via webpack by using `require`
   // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
-  return require(
-    `~/assets/img/${extension}/${pixelRatio}/${filename}.${extension}`
-  );
+  return require('~/assets/img/' + relativePath);
 }
 </script>
 
