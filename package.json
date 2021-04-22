@@ -10,6 +10,7 @@
     "commitizen": {
       "path": "cz-customizable"
     },
+    
     "cz-customizable": {
       "config": "node_modules/@peerhaven/peerhaven/.cz-config.js"
     }
@@ -62,6 +63,6 @@
     "lint:scss": "stylelint 'assets/scss/**/*.scss'",
     "start": "nuxt start"
   },
-  
+
   "version": "1.0.1"
 }

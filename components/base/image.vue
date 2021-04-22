@@ -1,6 +1,6 @@
 <script>
 export default {
-  data () {
+  data() {
     return {
       pixelRatioList: [
         '1.0x',
@@ -12,7 +12,7 @@ export default {
   },
 
   methods: {
-    getSource: function (extension) {
+    getSource(extension) {
       return getImagePath(
         this.pixelRatioList[0],
         this.filename,
@@ -20,7 +20,7 @@ export default {
       );
     },
 
-    getSourceSet: function (extension) {
+    getSourceSet(extension) {
       let value = this.getSource(extension);
 
       // intentionally starting at 1 because first pixel ratio already in value
@@ -30,6 +30,7 @@ export default {
           this.filename,
           extension
         );
+
         value += `, ${imagePath} ${this.pixelRatioList[i]}`;
       }
 
@@ -42,10 +43,12 @@ export default {
       required: true,
       type: String
     },
+
     filename: {
       required: true,
       type: String
     },
+
     info: String
   }
 };
@@ -55,12 +58,12 @@ export default {
  * - in development: /_nuxt/assets/img/png/1.0x/happy-emoji.png
  * - in production: /_nuxt/img/happy-emoji.d0882ca.png
  */
-function getImagePath(pixelRatio, filename, extension) {
-  let relativePath = `${extension}/${pixelRatio}/${filename}.${extension}`;
-
+const getImagePath = function (pixelRatio, filename, extension) {
   // request the image via webpack by using `require`
   // https://blog.lichter.io/posts/dynamic-images-vue-nuxt/
-  return require('~/assets/img/' + relativePath);
+  return require(
+    `~/assets/img/${extension}/${pixelRatio}/${filename}.${extension}`
+  );
 }
 </script>
 

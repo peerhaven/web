@@ -1,8 +1,10 @@
-require('dotenv').config(); // parse .env file
+// parse .env file
+require('dotenv').config();
 
 export default {
   build: {
-    maxChunkSize: 300000, // split into smaller files
+    // split into smaller files
+    maxChunkSize: 300000,
     postcss: {
       plugins: {
         'postcss-custom-properties': {
@@ -15,13 +17,17 @@ export default {
   },
 
   buildModules: ['@nuxtjs/style-resources'],
-  components: true, // auto import components
+
+  // auto import components
+  components: true,
+
   css: ['assets/scss/main'],
 
   head: {
     htmlAttrs: {
       lang: 'en'
     },
+
     link: [
       {
         color: '#36d1c4',
@@ -62,7 +68,9 @@ export default {
         rel: 'manifest'
       }
     ],
-    meta: [ // charset and viewport should come first
+
+    meta: [
+      // charset and viewport should come first
       {
         charset: 'utf-8'
       },
@@ -111,22 +119,26 @@ export default {
         name: 'description'
       }
     ],
+
     title: 'peerhaven'
   },
 
-  loading: { // custom progress bar
-    color: '#f6318c',
+  // custom progress bar
+  loading: {
+    color: 'hsl(332, 92%, 58%)',
     continuous: true,
-    failedColor: '#ff3860'
+    failedColor: 'hsl(348, 100%, 61%)'
   },
 
   modules: [
     [
       'nuxt-buefy',
       {
-        css: false // use SCSS imports instead
+        // use SCSS imports instead
+        css: false
       }
     ],
+
     [
       'nuxt-matomo',
       {
@@ -138,7 +150,8 @@ export default {
   ],
 
   render: {
-    csp: true // see https://github.com/nuxt/nuxt.js/pull/2549
+    // see https://github.com/nuxt/nuxt.js/pull/2549
+    csp: true
   },
 
   styleResources: {

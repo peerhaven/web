@@ -1,6 +1,6 @@
 <script>
 export default {
-  head () {
+  head() {
     return {
       bodyAttrs: {
         class: 'has-background-primary  has-content-centered'

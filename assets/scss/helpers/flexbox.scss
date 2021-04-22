@@ -12,18 +12,21 @@
  * Alignment
  */
 
-.has-content-h-centered { // horizontally
+// horizontally
+.has-content-h-centered {
   @extend .has-text-centered;
   @extend .is-flexbox;
   @extend .is-justify-content-center;
 }
 
-.has-content-v-centered { // vertically
+// vertically
+.has-content-v-centered {
   @extend .is-flexbox;
   @extend .is-align-items-center;
 }
 
-.has-content-centered { // both horizontally & vertically
+// both horizontally & vertically
+.has-content-centered {
   @extend .has-content-h-centered;
   @extend .has-content-v-centered;
 }
