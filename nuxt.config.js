@@ -103,10 +103,6 @@ export default {
         name: 'robots'
       },
       {
-        content: 'yes',
-        name: 'mobile-web-app-capable'
-      },
-      {
         content: 'Peerhaven',
         name: 'apple-mobile-web-app-title'
       },
@@ -117,6 +113,14 @@ export default {
       {
         content: 'Peerhaven is a place for you to save and share your bookmarks.',
         name: 'description'
+      },
+      {
+        content: 'telephone=no',
+        name: 'format-detection'
+      },
+      {
+        content: 'yes',
+        name: 'mobile-web-app-capable'
       }
     ],
 
