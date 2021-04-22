@@ -14,6 +14,6 @@
 
 ### Added
 
-- peerhaven logo
+- Peerhaven logo
 - [Favicons](https://en.wikipedia.org/wiki/Favicon) for various platforms (iOS, Android, Windows, browsers)
 - Analytics by [Matomo](https://matomo.org/)

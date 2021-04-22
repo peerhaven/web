@@ -18,6 +18,6 @@ export default {
   <base-image
     fallback="png"
     filename="ph-circle-darkgrey-white-transparent"
-    info="peerhaven logo"
+    info="Peerhaven logo"
   />
 </template>

@@ -107,20 +107,20 @@ export default {
         name: 'mobile-web-app-capable'
       },
       {
-        content: 'peerhaven',
+        content: 'Peerhaven',
         name: 'apple-mobile-web-app-title'
       },
       {
-        content: 'peerhaven',
+        content: 'Peerhaven',
         name: 'application-name'
       },
       {
-        content: 'peerhaven is a place for you to save and share your bookmarks.',
+        content: 'Peerhaven is a place for you to save and share your bookmarks.',
         name: 'description'
       }
     ],
 
-    title: 'peerhaven'
+    title: 'Peerhaven'
   },
 
   // custom progress bar

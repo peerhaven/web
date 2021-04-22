@@ -27,7 +27,7 @@ export default {
         class: 'has-background-primary  has-content-centered  has-text-white'
       },
 
-      title: `${this.errorMessage} · peerhaven`
+      title: `${this.errorMessage} · Peerhaven`
     };
   },
 
