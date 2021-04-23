@@ -1,6 +1,3 @@
-// parse .env file
-require('dotenv').config();
-
 export default {
   build: {
     // split into smaller files
@@ -140,15 +137,6 @@ export default {
       {
         // use SCSS imports instead
         css: false
-      }
-    ],
-
-    [
-      'nuxt-matomo',
-      {
-        cookies: true,
-        matomoUrl: process.env.MATOMO_URL,
-        siteId: process.env.MATOMO_SITE_ID
       }
     ]
   ],
