@@ -136,7 +136,9 @@ export default {
       'nuxt-buefy',
       {
         // use SCSS imports instead
-        css: false
+        css: false,
+
+        materialDesignIcons: false
       }
     ]
   ],
