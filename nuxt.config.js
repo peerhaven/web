@@ -144,8 +144,36 @@ export default {
   ],
 
   render: {
-    // see https://github.com/nuxt/nuxt.js/pull/2549
-    csp: true
+    csp: {
+      hashAlgorithm: 'sha512',
+
+      policies: {
+        'base-uri': ["'self'"],
+        'child-src': ["'none'"],
+        'connect-src': ["'self'"],
+        'default-src': ["'none'"],
+        'font-src': ['fonts.gstatic.com'],
+        'form-action': ["'none'"],
+        'frame-ancestors': ["'none'"],
+        'frame-src': ["'none'"],
+        'img-src': ["'self'"],
+        'manifest-src': ["'self'"],
+        'media-src': ["'none'"],
+        'object-src': ["'none'"],
+
+        // SHA-2 and 'self' injected by Nuxt
+        'script-src': [],
+
+        'style-src': [
+          // see https://github.com/buefy/nuxt-buefy/issues/97
+          "'unsafe-inline'",
+
+          'fonts.googleapis.com'
+        ],
+
+        'worker-src': ["'none'"]
+      }
+    }
   },
 
   styleResources: {
