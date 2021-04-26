@@ -2,7 +2,6 @@
 
 Please refer to [guide of main repository](https://github.com/peerhaven/peerhaven/blob/master/CONTRIBUTING.md) first.
 
-## Coding style guides
+## Coding style guide
 
-- **Vue**  
-  Please refer to the [official style guide](https://vuejs.org/v2/style-guide/).
+- [Vue](docs/style-guides/vue.md) (check conformity with `yarn lint:js`)

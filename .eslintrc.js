@@ -61,10 +61,18 @@ module.exports = {
       'before'
     ],
 
-    // use alphabetic sorting (script > style > template)
-    'vue/component-tags-order': 'off',
+    // use alphabetic sorting
+    'vue/component-tags-order': [
+      'error',
+      {
+        order: [
+          'script',
+          'style',
+          'template']
+      }
+    ],
 
-    // keep XML conformity
+    // keep HTML and XML conformity
     'vue/html-self-closing': [
       'error',
       {
@@ -76,6 +84,60 @@ module.exports = {
     ],
 
     // use alphabetic sorting
-    'vue/order-in-components': 'off'
+    'vue/order-in-components': [
+      'error',
+      {
+        order: [
+          'activated',
+          'asyncData',
+          'beforeCreate',
+          'beforeDestroy',
+          'beforeMount',
+          'beforeUpdate',
+          'comments',
+          'components',
+          'computed',
+          'created',
+          'data',
+          'deactivated',
+          'delimiters',
+          'destroyed',
+          'directives',
+          'el',
+          'emits',
+          'errorCaptured',
+          'extends',
+          'fetch',
+          'filters',
+          'functional',
+          'head',
+          'inheritAttrs',
+          'inject',
+          'key',
+          'layout',
+          'loading',
+          'methods',
+          'middleware',
+          'mixins',
+          'model',
+          'mounted',
+          'name',
+          'parent',
+          'props',
+          'propsData',
+          'provide',
+          'render',
+          'renderError',
+          'scrollToTop',
+          'setup',
+          'template',
+          'transition',
+          'updated',
+          'validate',
+          'watch',
+          'watchQuery'
+        ]
+      }
+    ]
   }
 };
