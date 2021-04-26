@@ -1,27 +1,27 @@
 <script>
 export default {
   computed: {
-    errorMessage() {
+    errorMessage () {
       return String(this.error.message);
     },
 
-    errorStatusCode() {
+    errorStatusCode () {
       return Number(this.error.statusCode);
-    },
+    }
   },
 
-  created() {
+  created () {
     this.initialiseMessage();
   },
 
-  data() {
+  data () {
     return {
       messageBody: 'An error occurred. Sorry!',
       messageTitle: 'Error'
     };
   },
 
-  head() {
+  head () {
     return {
       bodyAttrs: {
         class: 'has-background-primary  has-content-centered  has-text-white'
@@ -32,7 +32,7 @@ export default {
   },
 
   methods: {
-    initialiseMessage() {
+    initialiseMessage () {
       if (this.errorStatusCode === 404) {
         this.messageBody = 'The page you were looking for could not be found. If that causes you inconvenience, please get in touch with us.';
         this.messageTitle = 'Page not found';

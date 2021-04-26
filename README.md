@@ -3,7 +3,6 @@
 [![License: Fair Source 5](docs/img/license-fair-source-5.svg)](LICENSE.md)
 [![Contributions welcome](docs/img/contributions-welcome.svg)](CONTRIBUTING.md)
 [![Contributor Covenant](docs/img/contributor-covenant.svg)](https://github.com/peerhaven/peerhaven/blob/master/CODE_OF_CONDUCT.md)
-[![Code style: semistandard](docs/img/code-style-semistandard.svg)](https://github.com/standard/semistandard)
 [![Commitizen friendly](docs/img/commitizen-friendly.svg)](http://commitizen.github.io/cz-cli/)
 
 - [What is Peerhaven?](https://github.com/peerhaven/peerhaven#readme)
