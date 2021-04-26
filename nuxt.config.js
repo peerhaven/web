@@ -1,18 +1,4 @@
 export default {
-  build: {
-    // split into smaller files
-    maxChunkSize: 300000,
-    postcss: {
-      plugins: {
-        'postcss-custom-properties': {
-          // see https://github.com/buefy/buefy/issues/306
-          // and https://github.com/nuxt/nuxt.js/issues/1670
-          warnings: false
-        }
-      }
-    }
-  },
-
   buildModules: ['@nuxtjs/style-resources'],
 
   // auto import components
