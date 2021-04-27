@@ -1,0 +1,32 @@
+/*--------------*\
+  Flexbox helper
+\*--------------*/
+
+/*
+ * Basics
+ */
+
+.is-flexbox { display: flex; }
+
+/*
+ * Alignment
+ */
+
+// horizontally
+.has-content-h-centered {
+  @extend .has-text-centered;
+  @extend .is-flexbox;
+  @extend .is-justify-content-center;
+}
+
+// vertically
+.has-content-v-centered {
+  @extend .is-flexbox;
+  @extend .is-align-items-center;
+}
+
+// both horizontally & vertically
+.has-content-centered {
+  @extend .has-content-h-centered;
+  @extend .has-content-v-centered;
+}

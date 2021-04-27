@@ -1,0 +1,12 @@
+/*------------------*\
+  Component: Message
+\*------------------*/
+
+/**
+ * Extend message component: Bulma > Buefy >
+ */
+
+// leave a gap on the sides for narrow viewports
+.message { margin: 0 $clearance-small; }
+
+.message-header { @extend .has-text-weight-medium; }

@@ -1,33 +1,29 @@
-require('dotenv').config();
+export default {
+  buildModules: ['@nuxtjs/style-resources'],
 
-module.exports = {
-  build: {
-    extractCSS: {
-      allChunks: true // don't inline CSS; instead, output into separate file
-    },
-    maxChunkSize: 300000, // split into smaller files
-    postcss: {
-      plugins: {
-        'postcss-custom-properties': {
-          // see https://github.com/buefy/buefy/issues/306
-          // and https://github.com/nuxt/nuxt.js/issues/1670
-          warnings: false
-        }
-      }
-    }
-  },
-  css: [
-    {
-      lang: 'sass',
-      src: 'assets/scss/_main.scss'
-    }
-  ],
+  // auto import components
+  components: true,
+
+  css: ['assets/scss/main'],
+
   head: {
+    htmlAttrs: {
+      lang: 'en'
+    },
+
     link: [
       {
         color: '#36d1c4',
         href: '/safari-pinned-tab.svg?v=1',
         rel: 'mask-icon'
+      },
+      {
+        href: '//fonts.googleapis.com/css?family=Comfortaa:300&amp;subset=cyrillic,cyrillic-ext,greek,latin-ext',
+        rel: 'stylesheet'
+      },
+      {
+        href: '//fonts.googleapis.com/css?family=Maven+Pro:400,500&amp;subset=latin-ext',
+        rel: 'stylesheet'
       },
       {
         href: '/apple-touch-icon.png?v=1',
@@ -55,7 +51,9 @@ module.exports = {
         rel: 'manifest'
       }
     ],
-    meta: [ // charset and viewport should come first
+
+    meta: [
+      // charset and viewport should come first
       {
         charset: 'utf-8'
       },
@@ -68,16 +66,16 @@ module.exports = {
         content: 'ie=edge'
       },
       {
-        content: '/browserconfig.xml',
-        name: 'msapplication-config'
-      },
-      {
         content: '#36d1c4',
         name: 'msapplication-TileColor'
       },
       {
         content: '#36d1c4',
         name: 'theme-color'
+      },
+      {
+        content: '/browserconfig.xml',
+        name: 'msapplication-config'
       },
       {
         content: 'index,follow',
@@ -88,39 +86,83 @@ module.exports = {
         name: 'robots'
       },
       {
-        content: 'yes',
-        name: 'mobile-web-app-capable'
-      },
-      {
-        content: 'peerhaven',
+        content: 'Peerhaven',
         name: 'apple-mobile-web-app-title'
       },
       {
-        content: 'peerhaven',
+        content: 'Peerhaven',
         name: 'application-name'
       },
       {
-        content: 'peerhaven is a place for you to save and share your bookmarks.',
+        content: 'Peerhaven is a place for you to save and share your bookmarks.',
         name: 'description'
+      },
+      {
+        content: 'telephone=no',
+        name: 'format-detection'
+      },
+      {
+        content: 'yes',
+        name: 'mobile-web-app-capable'
       }
     ],
-    title: 'peerhaven'
+
+    title: 'Peerhaven'
   },
-  loading: { // customizing progress bar
-    color: '#f6318c',
-    failedColor: '#ff3860'
+
+  // custom progress bar
+  loading: {
+    color: 'hsl(332, 92%, 58%)',
+    continuous: true,
+    failedColor: 'hsl(348, 100%, 61%)'
   },
+
   modules: [
-    ['nuxt-buefy', {
-      css: false // use Sass imports instead
-    }],
-    ['nuxt-matomo', {
-      cookies: true,
-      matomoUrl: process.env.MATOMO_URL,
-      siteId: process.env.MATOMO_SITE_ID
-    }]
+    [
+      'nuxt-buefy',
+      {
+        // use SCSS imports instead
+        css: false,
+
+        materialDesignIcons: false
+      }
+    ]
   ],
+
   render: {
-    csp: true // see https://github.com/nuxt/nuxt.js/pull/2549
+    csp: {
+      hashAlgorithm: 'sha512',
+
+      policies: {
+        'base-uri': ["'self'"],
+        'child-src': ["'none'"],
+        'connect-src': ["'self'"],
+        'default-src': ["'none'"],
+        'font-src': ['fonts.gstatic.com'],
+        'form-action': ["'none'"],
+        'frame-ancestors': ["'none'"],
+        'frame-src': ["'none'"],
+        'img-src': ["'self'"],
+        'manifest-src': ["'self'"],
+        'media-src': ["'none'"],
+        'object-src': ["'none'"],
+
+        // SHA-2 and 'self' injected by Nuxt
+        'script-src': [],
+
+        'style-src': [
+          // see https://github.com/buefy/nuxt-buefy/issues/97
+          "'unsafe-inline'",
+
+          'fonts.googleapis.com'
+        ],
+
+        'worker-src': ["'none'"]
+      }
+    }
+  },
+
+  styleResources: {
+    scss: ['./assets/scss/implicit.scss']
   }
 };

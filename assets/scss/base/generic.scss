@@ -1,7 +1,16 @@
-body {
-  min-height: 100%;
+/*-------*\
+  Generic
+\*-------*/
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
-html {
-  height: 100%;
-}
+body { min-height: 100%; }
+
+h1 { margin-bottom: $clearance-medium; }
+
+html { height: 100%; }
+
+p:not(:last-of-type) { margin-bottom: $clearance-small; }

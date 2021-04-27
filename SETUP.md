@@ -7,14 +7,15 @@ Please see [setup instructions in main repository](https://github.com/peerhaven/
 Start development server:
 
 ```bash
-yarn run dev
+yarn dev # for localhost access, or
+yarn dev:lan # for LAN access
 ```
 
 Build project and start production server:
 
 ```bash
-yarn run build
-yarn run start
+yarn build
+yarn start
 ```
 
-You can use the command `yarn run build -a` to launch the Webpack Bundle Analyzer after building.
+You can use the command `yarn build -a` to launch the Webpack Bundle Analyzer after building.
