@@ -1,5 +1,15 @@
 <script>
 export default {
+  computed: {
+    errorMessage () {
+      return String(this.error.message);
+    },
+
+    errorStatusCode () {
+      return Number(this.error.statusCode);
+    }
+  },
+
   created () {
     this.initialiseMessage();
   },
@@ -16,13 +26,14 @@ export default {
       bodyAttrs: {
         class: 'has-background-primary  has-content-centered  has-text-white'
       },
-      title: this.error.message + ' · peerhaven'
+
+      title: `${this.errorMessage} · Peerhaven`
     };
   },
 
   methods: {
-    initialiseMessage: function () {
-      if (this.error.statusCode === 404) {
+    initialiseMessage () {
+      if (this.errorStatusCode === 404) {
         this.messageBody = 'The page you were looking for could not be found. If that causes you inconvenience, please get in touch with us.';
         this.messageTitle = 'Page not found';
       }
