@@ -6,6 +6,7 @@ This document is based on the [official Vue style guide](https://vuejs.org/v2/st
 
 - [Component tags order](#component-tags-order)
 - [HTML self-closing tags](#html-self-closing-tags)
+- [Multiple empty lines](#multiple-empty-lines)
 - [Order of properties in components](#order-of-properties-in-components)
 
 ## Component tags order
@@ -29,7 +30,21 @@ We strive for HTML and XML conformity:
 ```html
 <div></div>
 <img />
-<CustomComponent />
+<custom-component />
+```
+
+## Multiple empty lines
+
+ESLint rule: [`no-multiple-empty-lines`](https://eslint.org/docs/rules/no-multiple-empty-lines)
+
+Separate the three parts of a single-file component with 5 consecutive empty lines between them:
+
+```html
+<script></script>
+<!-- 5 consecutive empty lines -->
+<style></style>
+<!-- 5 consecutive empty lines -->
+<template></template>
 ```
 
 ## Order of properties in components

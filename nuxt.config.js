@@ -7,9 +7,7 @@ export default {
   css: ['assets/scss/main'],
 
   head: {
-    htmlAttrs: {
-      lang: 'en'
-    },
+    htmlAttrs: { lang: 'en' },
 
     link: [
       {

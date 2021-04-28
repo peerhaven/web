@@ -1,5 +1,5 @@
 $ ./node_modules/.bin/license-checker --summary
-├─ MIT: 1102
+├─ MIT: 1103
 ├─ ISC: 108
 ├─ BSD-2-Clause: 33
 ├─ CC0-1.0: 24
