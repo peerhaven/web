@@ -2,7 +2,13 @@
 export default {
   head () {
     return {
-      bodyAttrs: { class: 'has-background-primary  has-content-centered' }
+      bodyAttrs: {
+        class: [
+          'has-background-primary',
+          'has-content-centered',
+          'p-5'
+        ]
+      }
     };
   }
 };

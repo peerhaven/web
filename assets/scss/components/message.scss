@@ -6,7 +6,14 @@
  * Extend message component: Bulma > Buefy >
  */
 
-// leave a gap on the sides for narrow viewports
-.message { margin: 0 $clearance-small; }
+.message.is-compact {
+  max-width: 30rem;
+}
 
-.message-header { @extend .has-text-weight-medium; }
+.message-header {
+  @extend .has-text-weight-medium;
+
+  .message.is-compact > & {
+    justify-content: center;
+  }
+}

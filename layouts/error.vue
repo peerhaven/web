@@ -24,7 +24,13 @@ export default {
   head () {
     return {
       bodyAttrs: {
-        class: 'has-background-primary  has-content-centered  has-text-white'
+        class: [
+          'has-background-primary',
+          'has-content-centered',
+          'has-text-centered',
+          'has-text-white',
+          'p-5'
+        ]
       },
 
       title: `${this.errorMessage} · Peerhaven`
@@ -53,41 +59,27 @@ export default {
 
 
 
-<style lang="scss" scoped>
-/*
- * Extend message component: Bulma > Buefy > ph >
- */
-
-.message {
-  max-width: 30rem;
-
-  // has to be nested because it styles a sub component
-  &::v-deep > .message-header {
-    justify-content: center;
-  }
-}
-</style>
-
-
-
-
-
 <template>
-  <div>
+  <main>
     <base-image
       fallback="png"
       filename="aghast-emoji"
       info="aghast emoji"
     />
-    <h1>Oh snap!</h1>
+    <h1 class="mb-6">
+      Oh snap!
+    </h1>
 
     <b-message
       :closable="false"
       :title="messageTitle"
+      class="is-compact"
       type="is-warning"
     >
-      <p>{{ messageBody }}</p>
-      <p>
+      <p class="block">
+        {{ messageBody }}
+      </p>
+      <p class="block">
         <nuxt-link
           class="button"
           to="/"
@@ -96,5 +88,5 @@ export default {
         </nuxt-link>
       </p>
     </b-message>
-  </div>
+  </main>
 </template>

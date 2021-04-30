@@ -6,10 +6,6 @@
  * Peerhaven
  */
 
-/* Clearance / Gaps / Space */
-$clearance-medium: 3rem;
-$clearance-small:  1rem;
-
 /* Colors */
 $pink: hsl(332, 92%, 58%);
 
@@ -29,6 +25,3 @@ $turquoise: hsl(175, 63%, 52%);
 
 /* Derived: Link colors */
 $link-hover: $secondary;
-
-/* Derived: Typography */
-$size-normal: 1.25rem; // == $size-5

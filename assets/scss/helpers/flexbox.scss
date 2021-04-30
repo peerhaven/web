@@ -14,7 +14,6 @@
 
 // horizontally
 .has-content-h-centered {
-  @extend .has-text-centered;
   @extend .is-flexbox;
   @extend .is-justify-content-center;
 }

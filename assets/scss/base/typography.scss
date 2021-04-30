@@ -4,11 +4,13 @@
 
 body {
   @extend .has-text-weight-normal;
+  
   font-family: $family-running-text;
 }
 
 h1 {
   @extend .has-text-weight-light;
   @extend .is-size-1;
+
   font-family: $family-heading-text;
 }
