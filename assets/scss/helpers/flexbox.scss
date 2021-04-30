@@ -3,28 +3,22 @@
 \*--------------*/
 
 /*
- * Basics
- */
-
-.is-flexbox { display: flex; }
-
-/*
  * Alignment
  */
 
-// horizontally
+// center horizontally
 .has-content-h-centered {
-  @extend .is-flexbox;
+  @extend .is-flex;
   @extend .is-justify-content-center;
 }
 
-// vertically
+// center vertically
 .has-content-v-centered {
-  @extend .is-flexbox;
+  @extend .is-flex;
   @extend .is-align-items-center;
 }
 
-// both horizontally & vertically
+// center both horizontally & vertically
 .has-content-centered {
   @extend .has-content-h-centered;
   @extend .has-content-v-centered;
